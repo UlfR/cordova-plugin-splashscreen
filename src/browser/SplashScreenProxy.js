@@ -66,11 +66,11 @@ var SplashScreen = {
             localSplash = document.createElement("div");
             localSplash.style.backgroundColor = bgColor;
             localSplash.style.position = "absolute";
+            localSplash.style.zIndex = 10000;
 
             localSplashImage = document.createElement("img");
             localSplashImage.src = imageSrc;
             localSplashImage.style.position = "absolute";
-            localSplashImage.style.zIndex = 10000;
 
             updateImageLocation();
 
