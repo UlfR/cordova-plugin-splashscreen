@@ -21,12 +21,12 @@
 
 // Default parameter values including image size can be changed in `config.xml`
 var splashImageWidth = 170;
-var splashImageHeight = 200;
+var splashImageHeight = 'auto';
 var position = { x: 0, y: 0, width: splashImageWidth, height: splashImageHeight }; 
 var localSplash; // the image to display
 var localSplashImage;
 var bgColor = "#464646";
-var imageSrc = '/img/logo.png';
+var imageSrc = '/image/logo.png';
 var splashScreenDelay = 3000; // in milliseconds
 var showSplashScreen = true; // show splashcreen by default
 var cordova = require('cordova');
@@ -70,6 +70,7 @@ var SplashScreen = {
             localSplashImage = document.createElement("img");
             localSplashImage.src = imageSrc;
             localSplashImage.style.position = "absolute";
+            localSplashImage.style.zIndex = 10000;
 
             updateImageLocation();
 
